@@ -1,10 +1,16 @@
-def func(x):
-"""
-Basic Function. Defines 'x' as a variable and returns parabola, that is x^2-5x+6
-"""
-    return (x**2 - 5*x + 6) 
-    
-def derivative(x):
-    return (func(x+1e-7)-func(x))/(1e-7)
-    
-#print(derivative(5)) 
+a = ''
+def convert():
+    """
+    Recipe:
+    asks for input, attach to var x, finds mod adds to a as a string, intwise divides by 2, do the same until x becomes 0. 
+    Calls func again, do the same. 
+    """
+    x = int(input('Type Some Number In Decimal Base: '))
+    global a 
+    while x > 0: 
+        a = str(x % 2) + a 
+        x = x//2
+    print(a)
+    a = ''
+    convert()
+convert()
