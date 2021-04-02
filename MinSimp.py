@@ -28,3 +28,4 @@ def MinSimp(a,b):
         return L4
     return FindMin(makePairs(a,b))
 print(MinSimp(L,L2))
+help(MinSimp)
